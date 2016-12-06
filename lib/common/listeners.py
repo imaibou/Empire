@@ -125,10 +125,6 @@ class Listeners:
                 if option == 'Port':
                     listenerObject.options[option]['Value'] = value
                     # set the port in the Host configuration as well
-                    host = listenerObject.options['Host']['Value']
-                    parts = host.split(':')
-                    if len(parts) == 2 or len(parts) == 3:
-                        listenerObject.options['Host']['Value'] = "%s:%s:%s" % (parts[0], parts[1], str(value))
                     return True
 
                 elif option == 'StagingKey':
