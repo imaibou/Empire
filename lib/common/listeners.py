@@ -102,7 +102,7 @@ class Listeners:
 
                     if len(parts) != 1 and parts[-1].isdigit():
                         # if a port is specified with http://host:port
-                        listenerObject.options['Host']['Value'] = "%s://%s:%s" % (protocol, value, parts[-1])
+                        listenerObject.options['Host']['Value'] = "%s://%s" % (protocol, value)
                     elif listenerObject.options['Port']['Value'] != '':
                         # otherwise, check if the port value was manually set
                         listenerObject.options['Host']['Value'] = "%s://%s:%s" % (protocol, value, listenerObject.options['Port']['Value'])
